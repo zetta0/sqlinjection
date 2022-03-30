@@ -53,7 +53,7 @@ while True:
             print("\t[-] User {} hash length: {}".format(user_id, user_password_length))
             total_queries_taken()
             print("\t[-] User {} hash: {}".format(user_id, extract_hash(chartset, int(user_id), user_password_length)))
-            total_queries_taken
+            total_queries_taken()
         else:
             print("\t[X] User {} does not exist!".format(user_id))
         except KeyboardInterrupt:
